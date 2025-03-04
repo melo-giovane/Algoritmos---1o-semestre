@@ -1,7 +1,7 @@
-//Fa�a um algoritmo para calcular a quantidade de barbante necess�ria para amarrar um
-//pacote. O algoritmo ter� como entrada a largura, altura e comprimento do pacote, em
-//cent�metros. Para que o pacote fique firme s�o necess�rias 3 amarras e cada amarra
-//consome 10 cm de barbante.
+/* 7. Faça um algoritmo para calcular a quantidade de barbante necessária para amarrar um
+pacote. O algoritmo terá como entrada a largura, altura e comprimento do pacote, em
+centímetros. Para que o pacote fique firme são necessárias 3 amarras e cada amarra
+consome 10 cm de barbante. */
 
 #include <iostream>
 

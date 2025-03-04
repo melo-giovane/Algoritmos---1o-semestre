@@ -1,3 +1,8 @@
+/* 
+6. Considerando que para um consórcio, sabe-se o número total de prestações, a quantidade
+de prestações pagas e o valor atual da prestação, escreva um algoritmo que determine o
+total pago pelo consorciado e o saldo devedor.
+*/
 #include <iostream>
 
 using namespace std;

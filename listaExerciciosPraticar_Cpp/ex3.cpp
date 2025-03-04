@@ -1,3 +1,8 @@
+/* 
+3. Construa um algoritmo para pagamento de comissão de vendedores de peças, levando em
+consideração que sua comissão será de 5% do total da venda e que você tem os seguintes
+dados: Identificação do vendedor, Preço unitário da peça e Quantidade vendida.
+*/
 #include <iostream>
 
 using namespace std;

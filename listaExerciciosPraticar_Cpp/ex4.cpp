@@ -1,3 +1,9 @@
+/* 
+4. Uma pessoa comprou 3 (trÃªs) artigos em uma loja. Para cada artigo, tem-se nome, preÃ§o e
+percentual de desconto. FaÃ§a um algoritmo que imprima nome do artigo, preÃ§o sem
+desconto, preÃ§o com desconto de cada artigo e o total a pagar.
+*/
+
 #include <iostream>
 
 using namespace std;
@@ -7,7 +13,7 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	
-	//variáveis
+	//variï¿½veis
 	string produto1, produto2, produto3;
 	float preco1, preco2, preco3, desc1, desc2, desc3, precof1, precof2, precof3, total;
 	
@@ -15,7 +21,7 @@ int main() {
 	//produto 1
 	cout << "Insira o nome do primeiro produto: ";
 	cin >> produto1;
-	cout << "Qual o preço? ";
+	cout << "Qual o preï¿½o? ";
 	cin >> preco1;
 	cout << "Qual a porcentagem de desconto? ";
 	cin >> desc1;
@@ -23,7 +29,7 @@ int main() {
 	//produto2
 	cout << "\nInsira o nome do segundo produto: ";
 	cin >> produto2;
-	cout << "Qual o preço? ";
+	cout << "Qual o preï¿½o? ";
 	cin >> preco2;
 	cout << "Qual a procentagem de desconto? ";
 	cin >> desc2;
@@ -31,7 +37,7 @@ int main() {
 	//produto 3
 	cout << "\nInsira o nome do terceiro produto: ";
 	cin >> produto3;
-	cout << "Qual o preço? ";
+	cout << "Qual o preï¿½o? ";
 	cin >> preco3;
 	cout << "Qual a procentagem de desconto? ";
 	cin >> desc3;
@@ -43,7 +49,7 @@ int main() {
 	
 	total = precof1 + precof2 + precof3;
 	
-	//saídas
+	//saï¿½das
 	cout << "\n==============================================";
 	cout << "\nProduto 1: " << produto1 << " - R$" << preco1 << " Valor a pagar: R$" << precof1;
 	cout << "\nProduto 2: " << produto2 << " - R$" << preco2 << " Valor a pagar: R$" << precof2;

@@ -1,3 +1,11 @@
+/* 
+2. O custo de um carro novo ao consumidor, é a soma do custo de fábrica com o custo dos
+impostos (aplicados ao custo de fábrica), acrescido do percentual do revendedor. Supondo
+que a percentagem do revendedor seja de 10% e que os impostos custam 45% do custo de
+fábrica, faça um algoritmo que determine o preço final do automóvel (custo ao
+consumidor).
+*/
+
 #include <iostream>
 
 
