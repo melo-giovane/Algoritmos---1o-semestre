@@ -18,7 +18,7 @@ main()
   cout << "\n qual a cotacao do dolar? ";
   cin >> cotDolar;
   //p
-  real = dolar / cotDolar;
+  real = dolar * cotDolar;
 
   //s
   cout << "O valor em reais eh:R$ " << real;
