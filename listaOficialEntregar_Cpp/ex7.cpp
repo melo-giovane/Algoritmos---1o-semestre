@@ -27,5 +27,5 @@ main()
   dias = ((2025 - anoN) * 360) + (56 - ((mesN * 30) + diaN));
 
   // s
-  cout << "A pessoa viveu " << dias << " ate a data de 26/02/2025";
+  cout << "A pessoa viveu " << dias << "dias ate a data de 26/02/2025";
 }
