@@ -70,15 +70,15 @@ main()
   vlrImposto = (vlrBasico + vlrInter + vlrExcedente) * 0.12;
   vlrTotal = vlrBasico + vlrInter + vlrExcedente + vlrImposto;
 
-  cout << "\n=================================";
-  cout << "\n--------Gattino Telecom----------";
+  cout << "\n===================================";
+  cout << "\n---------Gattino Telecom-----------\n";
   cout << "\nTelefone " << tipoTexto << endl;
   cout << "Valor Basico:........... R$" << vlrBasico << endl;
   cout << "Custo Interurbano:...... R$" << vlrInter << endl;
   cout << "Custo Pulsos Excedentes: R$" << vlrExcedente << endl;
   cout << "Valor Imposto:.......... R$" << vlrImposto << endl;
   cout << "Total da Fatura:........ R$" << vlrTotal << endl;
-  cout << "\n=================================";
+  cout << "\n===================================";
 
 
 }
