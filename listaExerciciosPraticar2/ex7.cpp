@@ -22,5 +22,63 @@ using namespace std;
 
 main()
 {
+  int pulsos, tipo;
+  float minutosInter, vlrInter, vlrBasico, vlrExcedente, vlrImposto, vlrTotal;
+  string tipoTexto;
+
+  cout << "Informe 1 para residencial ou 2 para comercial: ";
+  cin >> tipo;
+  cout << "Informe o total de pulsos: ";
+  cin >> pulsos;
+  cout << "Informe a quantidade de minutos interurbanos: ";
+  cin >> minutosInter;
+
+  if (tipo == 1)
+  {
+   tipoTexto = "Residencial";
+   vlrBasico = 17.2;
+   vlrInter = minutosInter * 0.5;
+   if(pulsos > 90)
+   {
+      vlrExcedente = (pulsos - 90) * 0.07;
+   }
+   else
+   {
+      vlrExcedente = 0;
+   }
+  }
+  else if (tipo == 2)
+  {
+   tipoTexto = "Comercial";
+   vlrBasico = 25.8;
+   vlrInter = minutosInter * 0.5;
+      if(pulsos > 90)
+      {
+         vlrExcedente = (pulsos - 90) * 0.07;
+      }
+      else
+      {
+         vlrExcedente = 0;
+      }
+  }
+  else
+  {
+   cout << "tipo diferente de 1 ou 2.";
+   return 1;
+  }
   
+  vlrImposto = (vlrBasico + vlrInter + vlrExcedente) * 0.12;
+  vlrTotal = vlrBasico + vlrInter + vlrExcedente + vlrImposto;
+
+  cout << "\n=================================";
+  cout << "\n--------Gattino Telecom----------";
+  cout << "\nTelefone " << tipoTexto << endl;
+  cout << "Valor Basico:........... R$" << vlrBasico << endl;
+  cout << "Custo Interurbano:...... R$" << vlrInter << endl;
+  cout << "Custo Pulsos Excedentes: R$" << vlrExcedente << endl;
+  cout << "Valor Imposto:.......... R$" << vlrImposto << endl;
+  cout << "Total da Fatura:........ R$" << vlrTotal << endl;
+  cout << "\n=================================";
+
+
 }
