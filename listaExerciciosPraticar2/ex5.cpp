@@ -16,7 +16,11 @@ main()
   cout << "Informe a nota final: ";
   cin >> nota;
 
-  if (nota >= 7)
+  if (nota > 10 || nota <0)
+  {
+    cout << "nota invalida";
+  }
+  else if (nota >= 7)
   {
     cout << "Aprovado.";
   }

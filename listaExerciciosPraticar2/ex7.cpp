@@ -24,10 +24,14 @@ main()
 {
   int pulsos, tipo;
   float minutosInter, vlrInter, vlrBasico, vlrExcedente, vlrImposto, vlrTotal;
-  string tipoTexto;
+  string tipoTexto, nome, numeroTelefone;
 
   cout << "Informe 1 para residencial ou 2 para comercial: ";
   cin >> tipo;
+  cout << "Informe o nome: ";
+  cin >> nome;
+  cout << "Informe o numero do telefone: ";
+  cin >> numeroTelefone;
   cout << "Informe o total de pulsos: ";
   cin >> pulsos;
   cout << "Informe a quantidade de minutos interurbanos: ";
@@ -73,6 +77,8 @@ main()
   cout << "\n===================================";
   cout << "\n---------Gattino Telecom-----------\n";
   cout << "\nTelefone " << tipoTexto << endl;
+  cout << "Numero do telefone: " << numeroTelefone << endl;
+  cout << "Nome: " << nome << "\n" << endl;
   cout << "Valor Basico:........... R$" << vlrBasico << endl;
   cout << "Custo Interurbano:...... R$" << vlrInter << endl;
   cout << "Custo Pulsos Excedentes: R$" << vlrExcedente << endl;
