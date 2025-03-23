@@ -37,47 +37,84 @@ main()
 {
 float consumo, vlrConsumo, vlrConta, taxa, pis, cofins, vlrTotal;
 int tipo;
-string categoria;
+string categoria, matricula;
 
-//consumo
-if(consumo < 10)
+//Entradas
+cout << "Informe a matricula: ";
+cin >> matricula;
+cout << "Informe o numero de m3 consumidos no mes: ";
+cin >> consumo;
+cout << "Informe 1 para Residencial, 2 para Comercial, 3 para Industrial";
+cin >> tipo;
+
+//Controle das entraadaas
+if(consumo < 0 || tipo < 1 || tipo > 3)
 {
-  vlrConsumo = consumo * 2.99;
-}
-else if(consumo <= 25)
-{
-  vlrConsumo = ((consumo - 10) * 5.48) + (10 * 2.99);
-}
-else if(consumo <= 50)
-{
-  vlrConsumo = ((consumo - 25) * 7.69) + (25 * 5.48) + (10 * 2.99);
+  cout << "Erro na(s) entrada(s).";
 }
 else
 {
-  vlrConsumo = ((consumo - 50) * 9.22)+ (50 * 7.69) + (25 * 5.48) + (10 * 2.99);
+
+  //consumo
+  if(consumo < 10)
+  {
+    vlrConsumo = consumo * 2.99;
+  }
+  else if(consumo <= 25)
+  {
+    vlrConsumo = ((consumo - 10) * 5.48) + (10 * 2.99);
+  }
+  else if(consumo <= 50)
+  {
+    vlrConsumo = ((consumo - 25) * 7.69) + (25 * 5.48) + (10 * 2.99);
+  }
+  else
+  {
+    vlrConsumo = ((consumo - 50) * 9.22)+ (50 * 7.69) + (25 * 5.48) + (10 * 2.99);
+  }
+  
+  //Taxa e tipo Saneamento
+  if(tipo == 1)
+  {
+    taxa = 5;
+    categoria = "Residencial";
+  }
+  else if(tipo == 2)
+  {
+    taxa = 10;
+    categoria = "Comercial";
+  }
+  else
+  {
+    taxa = 15;
+    categoria = "Industrial";
+  }
+  
+  //Valor antes dos impostos
+  vlrConta = vlrConsumo + taxa;
+  
+  //Impostos
+  pis = vlrConta * 0.0065;
+  cofins = vlrConta * 0.03;
+  
+  //Valor total com impostos
+  vlrTotal = vlrConta + pis + cofins;
+  
+  //Saidas
+  cout << endl << "------------------------------------" << endl;
+  cout << "-------------- Semasa --------------" << endl;
+  cout << "Matricula: ................." << matricula << endl;
+  cout << "Categoria: " << categoria << endl;
+  //a)
+  cout << "Valor do consumo + taxa:... R$" << vlrConta << endl;
+  //b)
+  cout << "Valo do PIS: ...............R$" << pis << endl;
+  //c)
+  cout << "Valor do COFINS: ...........R$" << cofins << endl << endl;
+  //d)
+  cout << "Valor total da conta: ......R$" << vlrTotal;
+  cout << endl << "------------------------------------" << endl;
 }
 
-//Saneamento
-if(tipo == 1)
-{
-  taxa = 5;
-  categoria = "Residencial";
-}
-else if(tipo == 2)
-{
-  taxa = 10;
-  categoria = "Comercial";
-}
-if(tipo == 1)
-{
-  taxa = 15;
-  categoria = "Industrial";
-}
 
-//Valor antes dos impostos
-vlrConta = vlrConsumo + taxa;
-
-//Impostos
-pis = vlrConta * 0.0065;
-cofins = vlrConta * 0.03;
 }
