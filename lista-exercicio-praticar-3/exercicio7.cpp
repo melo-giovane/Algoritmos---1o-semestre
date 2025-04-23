@@ -11,7 +11,7 @@ float nota;
 
 main()
 {
-  for (int i=0; i < 4; i++)
+  for (int i=0; i < 40; i++)
   {
     cout << "Informe a sua nota: ";
     cin >> nota;
