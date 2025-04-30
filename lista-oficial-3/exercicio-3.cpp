@@ -52,5 +52,4 @@ cout << "A media de idade das pessoas com mais de 1,8m eh: " << mediaIdade << en
 cout << "O total de pessoas com mais de 35 anos eh: " << contMaisVelhos << endl;
 cout << "O nome do mais alto eh: " << maisAlto << endl;
 cout << "O nome do mais novo eh: " << maisNovo << endl;
-
 }
