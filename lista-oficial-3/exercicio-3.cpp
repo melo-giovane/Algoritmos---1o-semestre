@@ -13,9 +13,9 @@ using namespace std;
 
 main()
 {
-int contAltos=0, contMaisVelhos=0, idade, idadeMaisVelho, alturaMaisAlto =0;
-string maisAlto, maisVelho, nome;
-float altura, mediaAltura, somaAltura;
+int contAltos=0, contMaisVelhos=0, idade, idadeMaisNovo=200;
+string maisAlto, maisNovo, nome;
+float altura, mediaIdade, somaIdades, alturaMaisAlto =0;
 
 for (int i = 0; i < 20; i++)
 {
@@ -29,26 +29,28 @@ for (int i = 0; i < 20; i++)
   if (altura > 1.8)
   {
     contAltos++;
+    somaIdades += idade;
   }
   if (idade > 35)
   {
     contMaisVelhos++;
-    somaAltura += altura;
   }
-  if (idade > idadeMaisVelho)
+  if (idade < idadeMaisNovo)
   {
-    maisVelho = nome;
+    idadeMaisNovo = idade;
+    maisNovo = nome;
   }
   if (altura > alturaMaisAlto)
   {
+    alturaMaisAlto = altura;
     maisAlto = nome;
   }
 }
-mediaAltura = somaAltura / contMaisVelhos;
+mediaIdade = somaIdades / contAltos;
 
-cout << "A media de idade das pessoas com mais de 1,8m é: " << mediaAltura << endl;
-cout << "O total de pessoas com mais de 35 canos eh: " << contMaisVelhos << endl;
+cout << "A media de idade das pessoas com mais de 1,8m eh: " << mediaIdade << endl;
+cout << "O total de pessoas com mais de 35 anos eh: " << contMaisVelhos << endl;
 cout << "O nome do mais alto eh: " << maisAlto << endl;
-cout << "O nome do mais velho eh: " << maisVelho << endl;
+cout << "O nome do mais novo eh: " << maisNovo << endl;
 
 }
