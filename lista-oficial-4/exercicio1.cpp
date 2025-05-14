@@ -14,7 +14,7 @@ main()
   string nome;
   float nota, somaNota=0, mediaNota;
 
-  while (alunos < 4)
+  while (alunos < 15)
   {
     cout << "Informe o nome ('fim' para encerrar): ";
     cin >> nome;
