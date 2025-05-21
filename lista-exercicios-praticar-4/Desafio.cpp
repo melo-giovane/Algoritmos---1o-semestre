@@ -4,7 +4,7 @@ using namespace std;
 
 main()
 {
-  int idade=-1, maisVelho=0, qtdMaisVelhos=0;
+  int idade=1, maisVelho=0, qtdMaisVelhos=0;
 
   while (idade != 0)
   {
